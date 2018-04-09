@@ -1,0 +1,709 @@
+{
+  "atmosphere": {
+    "address": "34 Windsor Crescent",
+    "associatedTags": "hot waitresses, shisha, very good ethiopian food, small food servings. ",
+    "email": "",
+    "image": "gs://klim-advocates.appspot.com/atmosphere_map.png",
+    "name": "Atmosphere Lounge and Restaurant",
+    "open": "3pm - 5am (Monday - Saturday)",
+    "services": "Exotic cuisines, bar",
+    "rating": 4.3,
+    "food": "yes",
+    "shots": "3000UGX",
+    "beer": "5000UGX",
+    "popular": {
+      "0": "Tuesday",
+      "1": "Friday",
+      "2": "Saturday"
+    },
+    "promos": {
+      "0": "3 shots for 6k (wednesday)",
+      "1": "2 beers for 5k (thursday)"
+    },
+    "events": {
+      "0": "Tuesday - Girls In The City",
+      "1": "Wednesday - Quiz Night",
+      "2": "Friday - Urban Night",
+      "3": "Saturday - DJ Party"
+    }
+  },
+  "bigmikes": {
+    "name": "Big Mike's Cocktail Bar",
+    "address": "19 John Babiha Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "5pm - 6am",
+    "events": {
+      "0": "Happy Hour 5pm-8pm everyday",
+      "1": "Tuesday - Quiz night"
+    },
+    "rating": 4.2,
+    "food": "",
+    "services": "Bar, cocktails",
+    "email": ""
+  },
+  "mythos": {
+    "name": "Mythos Greek Taverna and Lounge",
+    "address": "Kololo, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "12pm - 3am",
+    "events": "Open Monday to Sunday",
+    "rating": 4.6,
+    "food": "",
+    "services": "Greek & African Cuisines, Bar, Mobile bar, Events hosting",
+    "email": ""
+  },
+  "bubbles": {
+    "name": "Bubbles O'Learys",
+    "address": "Windsor Crescent, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "11am - 6am",
+    "events": {
+      "0": "Monday - Karaoke night",
+      "1": "Wednesday - Band Night"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Bar, dance and night club",
+    "email": ""
+  },
+  "wink": {
+    "name": "The Wink Bar and Lounge",
+    "address": "35 Acacia Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "5pm - 4am",
+    "events": "Open Monday to Sunday",
+    "rating": 3.9,
+    "food": "",
+    "services": "Bar & Grill",
+    "email": ""
+  },
+  "casablanca": {
+    "name": "Casablanca",
+    "address": "26 John Babiha Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "10am - 6am",
+    "events": "Open Monday to Sunday",
+    "food": "",
+    "services": "Pub & Barbecue Restaurant",
+    "email": ""
+  },
+  "clubFame": {
+    "name": "Club Fame",
+    "address": "2 Lower Kololo Terrace Rd, Acacia Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "10am - 4am",
+    "events": "Open Monday to Sunday",
+    "rating": 4.5,
+    "food": "",
+    "services": "Pub & Restaurant",
+    "email": ""
+  },
+  "riders": {
+    "name": "Rider's Lounge",
+    "address": "Acacia Place, Acacia Ave",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": "Open Monday to Sunday",
+    "rating": 4.5,
+    "food": "",
+    "services": "Bar & Grill",
+    "email": ""
+  },
+  "monot": {
+    "name": "Monot Bar",
+    "address": "31B Bandali Rise, Bugolobi, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "4pm - 5am",
+    "events": {
+      "0": "Wine Tuesdays",
+      "1": "Jameson Fridays",
+      "2": "Silverback Saturdays",
+      "3": "Carnival Sundays"
+    },
+    "rating": 4.2,
+    "food": "",
+    "services": "Bar, Spanish restaurant",
+    "email": ""
+  },
+  "gattoMatto": {
+    "name": "Gatto Matto",
+    "address": "2 Bandali Rise, Bugolobi, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "9am - 3am",
+    "events": "Open Monday to Sunday, Jazz & Blues, Italian",
+    "rating": 4.3,
+    "food": "",
+    "services": "Bar, barbecue",
+    "email": ""
+  },
+  "alchemist": {
+    "name": "Alchemist Kitchen and Bar",
+    "address": "31A Bandali Rise, Bugolobi, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "11am - 3am",
+    "events": {
+      "0": "Tequila Tuesdays",
+      "1": "Whiskey Wednesdays",
+      "2": "Happy hour 5-7pm"
+    },
+    "rating": 4.5,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "gabiro": {
+    "name": "Club Gabiro",
+    "address": "Bugolobi, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "12pm - 5am",
+    "events": "Open Monday to Sunday",
+    "rating": 3.7,
+    "food": "",
+    "services": "Bar & grill",
+    "email": ""
+  },
+  "diners": {
+    "name": "Diner's Lounge",
+    "address": "Bukoto-Kisasi Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": "Open Monday to Sunday",
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "cayenne": {
+    "name": "Cayenne Restaurant & Lounge",
+    "address": "1213 Bukoto, Kira Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "12pm - till late",
+    "events": {
+      "0": "Monday - Jazz Night",
+      "1": "Tuesday - Latin Night",
+      "2": "Thunder Thursdays",
+      "3": "Saturday - Mega Dance Mix",
+      "4": "Sunday - Moroccan Poolside"
+    },
+    "food": "",
+    "services": "",
+    "email": ""
+  },
+  "skyLounge": {
+    "name": "Sky Lounge",
+    "address": "11 Cooper Rd, Kisementi, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "12pm - 3am",
+    "events": {
+      "0": "Coconut Tuesdays",
+      "1": "Lituation Wednesdays",
+      "2": "Mix and Grill Sundays"
+    },
+    "rating": 4.5,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "justKicking": {
+    "name": "Just Kicking",
+    "address": "Bukoto St, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "11am - 3am",
+    "events": "Open Monday to Sunday",
+    "rating": 4,
+    "food": "",
+    "services": "Sports bar, restaurant & grill",
+    "email": ""
+  },
+  "dePosh": {
+    "name": "De Posh Bar",
+    "address": "Kabalagala, Muyenga Rd.",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": "Open Monday to Sunday",
+    "rating": 3.8,
+    "food": "",
+    "services": "Dance & Night Club, bar & grill",
+    "email": ""
+  },
+  "amnesia": {
+    "name": "Amnesia",
+    "address": "2/2b Plaza building, Kampala Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": {
+      "0": "Tuesday - Comedy night",
+      "1": "Thursday - Campus night"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Dance & Night Club, bar, adult entertainment service",
+    "email": ""
+  },
+  "space": {
+    "name": "Space Lounge",
+    "address": "Railway Headquarters, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "5pm - 7am",
+    "events": "Open Monday to Sunday",
+    "rating": 4,
+    "food": "",
+    "services": "Dance & Night Club, bar & grill",
+    "email": ""
+  },
+  "game": {
+    "name": "Game Club",
+    "address": "58 Lumumba Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "3pm - 6am",
+    "events": {
+      "0": "Tuesday - Campus Rave",
+      "1": "Thursday - Celebrity night",
+      "2": "Fleak Friday"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Club house, night club, bar",
+    "email": ""
+  },
+  "valhalla": {
+    "name": "Valhalla",
+    "address": "Lumumba Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "3pm - 5am",
+    "events": {
+      "0": "Jamrock Thursday",
+      "1": "Black on Black Fridays - happy hour from 6pm"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Pub",
+    "email": ""
+  },
+  "ambiance": {
+    "name": "Club Ambiance",
+    "address": "Hoima Rd, Bakuli, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": {
+      "0": "Friday - Campus night with DJ Shiru"
+    },
+    "rating": 4.4,
+    "food": "",
+    "services": "Dance & night club",
+    "email": ""
+  },
+  "brisk": {
+    "name": "Brisk",
+    "address": "6 Wampewo Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": "Face2Face Wednesdays Cocktails",
+    "rating": 4.4,
+    "food": "",
+    "services": "Restaurant, Caf� & Lounge",
+    "email": ""
+  },
+  "panamera": {
+    "name": "Panamera",
+    "address": "20 - 30 Saddler Lane, Opp Kampala Parents School, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": {
+      "0": "Wikidi Wednesdays",
+      "1": "Coco Thursdays",
+      "2": "Kickback Fridays - 4-9pm Happy Hour"
+    },
+    "rating": 4.4,
+    "food": "",
+    "services": "Bar & Grill, Lounge",
+    "email": ""
+  },
+  "legends'": {
+    "name": "Legends'",
+    "address": "Behind Forest Mall, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": "Electronic Mondays",
+    "rating": 4.3,
+    "food": "",
+    "services": "Sports bar, restaurant & rugby pitch",
+    "email": ""
+  },
+  "kokoBar": {
+    "name": "Koko Bar",
+    "address": "Ntinda, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": {
+      "0": "Johnny Walker Weekends",
+      "1": "Tequila Fridays",
+      "2": "Wednesday - Campus+Ladies Night",
+      "3": "Thursday - Reggae Night"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Dance & Night club, Sports bar",
+    "email": ""
+  },
+  "sweetBar": {
+    "name": "Sweet Bar",
+    "address": "16 George St, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "4pm - 3am",
+    "events": {
+      "0": "Wednesday - Quiz Night",
+      "1": "Thursday - karaoke Night",
+      "2": "Friday - Live Band Night"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Bar, Restaurant, Sports bar",
+    "email": ""
+  },
+  "nexus": {
+    "name": "Nexus Lounge",
+    "address": "Najjera, Ntinda, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "6pm - 6am",
+    "events": {
+      "0": "Thirsty Thursday - Happy Hour 6-10pm",
+      "1": "Splendid Fridays",
+      "2": "Star Saturdays",
+      "3": "Backyard Chill Sunday"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Bar, dance and night club",
+    "email": ""
+
+  },
+  "liquidSilk": {
+    "name": "Liquid Silk",
+    "address": "Spring Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "12pm - 6am",
+    "events": "Unplugged Wednesdays",
+    "rating": 4.5,
+    "food": "",
+    "services": "Lounge, bar & restaurant",
+    "email": ""
+  },
+  "cityville": {
+    "name": "Cityville",
+    "address": "133/134 Old Kira Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "8am - 6am",
+    "events": "Radioactive Fridays",
+    "rating": 4.3,
+    "food": "",
+    "services": "Lounge, bar & restaurant",
+    "email": ""
+  },
+  "rock": {
+    "name": "Rock Catalina",
+    "address": "Bukoto Ntinda Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": "Open Monday to Sunday",
+    "rating": 3.8,
+    "food": "",
+    "services": "Pub",
+    "email": ""
+  },
+  "mist": {
+    "name": "Mist Bar",
+    "address": "16-20 Kintu Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": "Open Monday to Sunday",
+    "food": "",
+    "services": "Bar",
+    "email": ""
+  },
+  "gecko": {
+    "name": "Gecko Lounge & Terrace",
+    "address": "Mackinnon Suites, Mackinnon Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": "Open Monday to Sunday",
+    "rating": 4.6,
+    "food": "",
+    "services": "Bar",
+    "email": ""
+  },
+  "kyadondo": {
+    "name": "Kyadondo",
+    "address": "Jinja Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "8am - 3am",
+    "events": "Open Monday to Sunday",
+    "rating": 4.4,
+    "food": "",
+    "services": "Sports club. Stadium, Bar, Restaurant",
+    "email": ""
+  },
+  "mugiez": {
+    "name": "Mugiez",
+    "address": "Mutungo, Biina Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": "Wednesday - Campus Night",
+    "food": "",
+    "services": "Bar",
+    "email": ""
+  },
+  "trendz": {
+    "name": "Trendz Lounge",
+    "address": "Bugolobi, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "8am - 6am",
+    "events": "Open Monday to Sunday - Happy hour 5-9pm",
+    "rating": 4.3,
+    "food": "",
+    "services": "bar",
+    "email": ""
+  },
+  "route256": {
+    "name": "Route 256",
+    "address": "Hesketh Bell Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24 hours",
+    "events": "Friday - Band night",
+    "rating": 4.5,
+    "food": "",
+    "services": "Bar, Restaurant,",
+    "email": ""
+  },
+  "topNotch": {
+    "name": "Top Notch",
+    "address": "Kisaasi-Kyanja Rd, Ntinda",
+    "image": "",
+    "associatedTags": "",
+    "open": "4pm - 6am",
+    "events": "Celebrity Saturdays",
+    "rating": 3.3,
+    "food": "",
+    "services": "Bar",
+    "email": ""
+  },
+  "h2OLounge": {
+    "name": "H2O Lounge",
+    "address": "13A John Babiha Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "4pm - 4am",
+    "events": "Open Monday to Sunday",
+    "rating": 3.9,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "temptations": {
+    "name": "Temptations Sheraton",
+    "address": "1 Ternan Ave, Sheraton Kampala Hotel, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "8am- 10pm",
+    "events": "Monday - Saturday",
+    "rating": 4.2,
+    "food": "",
+    "services": "Pastry Shop",
+    "email": ""
+  },
+  "diningRoom": {
+    "name": "Dining Room",
+    "address": "Lourdel Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "7am - 12am",
+    "events": "Monday - Saturday",
+    "rating": 3.5,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "baristos": {
+    "name": "Baristos",
+    "address": "130 Old Kira Rd",
+    "image": "",
+    "associatedTags": "",
+    "open": "8am - 11pm",
+    "events": {
+      "0": "Fly High Fridays (Happy Hour all night)",
+      "1": "Jameson Saturdays"
+    },
+    "rating": 4,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "kyoto": {
+    "name": "Kyoto",
+    "address": "Centenary Park, Kampala Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "10am - 12am",
+    "events": "Open Monday to Sunday",
+    "rating": 4.1,
+    "food": "",
+    "services": "Sushi Bar & Restaurant",
+    "email": ""
+  },
+  "rockGarden": {
+    "name": "Rock Garden",
+    "address": "Nile Ave, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "5pm - 12am",
+    "events": "Open Monday to Sunday",
+    "rating": 3.6,
+    "food": "",
+    "services": "Lounge, bar & restaurant",
+    "email": ""
+  },
+  "guvnor": {
+    "name": "Guvnor",
+    "address": "77 First Street, Industrial Area, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "Opens Friday",
+    "events": {
+      "0": "Saturday Night Fever",
+      "1": "Last Friday Night - Live with Afrigo"
+    },
+    "rating": 4.3,
+    "food": "",
+    "services": "Dance & night club, bar",
+    "email": ""
+  },
+  "clubPlay": {
+    "name": "Club Play",
+    "address": "18 Industrial Area, Second Street, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": {
+      "0": "Wild Out Wednesday",
+      "1": "Fab Fridays",
+      "2": "Play Saturdays"
+    },
+    "rating": 4.1,
+    "food": "",
+    "services": "Dance & night club, bar",
+    "email": ""
+  },
+  "dons": {
+    "name": "Don's Club",
+    "address": "40, Opp. The Square, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": {
+      "0": "Bucket Night - Wednesday",
+      "1": "Thursday - African Nite Live band"
+    },
+    "rating": 4.6,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "laftaz": {
+    "name": "Laftaz",
+    "address": "Centenary Park (next poolside), Kampala Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "8am- 12am",
+    "events": "Monday - Saturday",
+    "rating": 3.5,
+    "food": "",
+    "services": "Comedy",
+    "email": ""
+
+  },
+  "cyclone": {
+    "name": "Club Cyclone",
+    "address": "Tirupati Mazima Mall, Ggaba Rd, Nsambya, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": "Wednesdays - Campus Night",
+    "rating": 4,
+    "food": "",
+    "services": "Bar & Restaurant",
+    "email": ""
+  },
+  "jahazi": {
+    "name": "Jahazi Pier",
+    "address": "Lake Victoria, Munyonyo, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "10am - 10pm",
+    "events": "Open Monday to Sunday",
+    "rating": 4,
+    "food": "",
+    "services": "",
+    "email": ""
+  },
+  "maxlounge": {
+    "name": "Max Lounge",
+    "address": "Kyaliwajjala-Kiira Rd, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "24hrs",
+    "events": "Open Monday to Sunday",
+    "rating": 3.9,
+    "food": "",
+    "services": "Pub",
+    "email": ""
+  },
+  "cosmo": {
+    "name": "Cosmo Bar & Lounge",
+    "address": "Kisementi, Opp Acacia Mall, Kampala",
+    "image": "",
+    "associatedTags": "",
+    "open": "",
+    "events": {
+      "0": "Friday - Campus Night"
+    },
+    "rating": 3.8,
+    "food": "",
+    "services": "Bar",
+    "email": ""
+  }
+}

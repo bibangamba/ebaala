@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Ebaala</string>
+    <string name="logo_on_sign_in_page">Logo on sign in page</string>
+    <string name="loading">Loading…</string>
+    <string name="help_and_feedback"><![CDATA[Help & Feedback]]></string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="transport">Transport</string>
+    <string name="uber">Uber</string>
+    <string name="safeboda">Safeboda</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="close_drawer">Close navigation drawer</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="places">Places</string>
+    <string name="tonight">Tonight</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="sample_place_name">Panamera Bar and Restaurant</string>
+    <string name="sample_rating">3.7</string>
+    <string name="sample_tags">Known For: jazz music, muchomo, foreign crowd, hot babes</string>
+    <string name="title_activity_place_details">PlaceDetails</string>
+    <string name="location_on_a_map">Location on a map</string>
+    <string name="mon">mon</string>
+    <string name="tue">tue</string>
+    <string name="blues">blues</string>
+    <string name="monday_time">10:00pm - 6:00am</string>
+    <string name="wed">wed</string>
+    <string name="fri">fri</string>
+    <string name="thur">thur</string>
+    <string name="sat">sat</string>
+    <string name="sun">sun</string>
+    <string name="address_icon">Address Icon</string>
+    <string name="sample_address">Acacia Avenue, Kampala, Uganda</string>
+    <string name="open_close_times">Open/Close Times</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_location">Location</string>
+
+    <string name="location_sharing_preference">Allow access to location data</string>
+    <string name="pref_description_location_sharing">Allow only friends and contacts to see your current and previous location data
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_notify_friends_when_you_leave_a_place">Notify friends when you leave a place</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <!--<item>When possible</item>-->
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <!--<item>0</item>-->
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_enable_notifications">Enable notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="location_always_on_preference">Always turn on location</string>
+    <string name="pref_description_location_always_on">Turn on location whenever the app is running so that your location data is accurate</string>
+</resources>

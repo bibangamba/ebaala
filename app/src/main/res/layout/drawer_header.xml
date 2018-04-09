@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/drawer_header_height"
+    android:background="@drawable/nav_drawer_bg"
+    android:gravity="bottom"
+    android:id="@+id/nav_linear_layout"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <!--android:background="@drawable/navigation_background"-->
+
+    <ImageView
+        android:id="@+id/drawer_profile_image"
+        android:layout_width="@dimen/drawer_header_profile"
+        android:layout_height="@dimen/drawer_header_profile"
+        android:layout_marginBottom="@dimen/standard_margin"
+        android:contentDescription="@string/profile"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_account_circle_white_36dp" />
+
+    <TextView
+        android:id="@+id/drawer_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/drawer_email"
+        style="@style/Widget.AppCompat.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+</LinearLayout>
