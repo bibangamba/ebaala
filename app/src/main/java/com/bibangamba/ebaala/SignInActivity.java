@@ -112,7 +112,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
@@ -128,6 +127,10 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                 }
                 firebaseAuthWithGoogle(account);
             } else {
+                Log.e(TAG, "########################### result value ################################" +result.getStatus());
+                Log.e(TAG, "########################### result value ################################" +result.isSuccess());
+                Log.e(TAG, "########################### result value ################################" +result.getSignInAccount());
+                Log.e(TAG, "########################### probably add SHA1 to firebase to all this build access authentication ################################" +result.getSignInAccount());
                 // Google Sign In failed, update UI appropriately
                 // [START_EXCLUDE]
                 updateUI(null, false);
@@ -186,7 +189,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
-//        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getIdToken());
+         Log.e(TAG, "FAILURE HERE:" + acct.getIdToken());
         // [START_EXCLUDE silent]
         showProgressDialog();
         // [END_EXCLUDE]
@@ -197,6 +200,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Log.e(TAG, "IN HERE:");
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
@@ -224,6 +228,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     }
 
     private void googleSignIn() {
+        Log.e(TAG, "###########################Signin Intent Started################################");
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }

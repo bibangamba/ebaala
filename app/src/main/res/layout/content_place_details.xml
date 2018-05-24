@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +6,8 @@
     android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.bibangamba.ebaala.activities.PlaceDetails"
-    tools:showIn="@layout/place_details_activity">
+    tools:showIn="@layout/place_details_activity"
+    android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +18,9 @@
             android:id="@+id/place_details_header_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary">
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true">
 
             <TextView
                 android:id="@+id/place_name_tv"
@@ -33,10 +35,9 @@
                 android:layout_marginRight="12dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:maxWidth="200dp"
+                android:maxWidth="300dp"
                 android:text="@string/sample_place_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/white"
                 android:textSize="24sp"
                 android:typeface="sans" />
 
@@ -51,21 +52,117 @@
                 android:layout_marginTop="12dp"
                 android:text="@string/sample_rating"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/white"
                 android:textSize="24sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/hapennig_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/place_name_tv"
+                android:layout_alignStart="@+id/place_name_tv"
+                android:layout_below="@+id/place_name_tv"
+                android:layout_marginBottom="4dp"
+                android:text="@string/sample_happening"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="14sp"
+                android:textStyle="normal|italic"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/services_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/hapennig_tv"
+                android:layout_alignStart="@+id/hapennig_tv"
+                android:layout_below="@+id/hapennig_tv"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sample_services"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="14sp"
+                android:textStyle="normal|italic"
                 android:typeface="sans" />
 
             <TextView
                 android:id="@+id/tags_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/place_name_tv"
-                android:layout_alignStart="@+id/place_name_tv"
-                android:layout_below="@+id/place_name_tv"
+                android:layout_alignLeft="@+id/services_tv"
+                android:layout_alignStart="@+id/services_tv"
+                android:layout_below="@+id/services_tv"
                 android:layout_marginBottom="8dp"
                 android:text="@string/sample_tags"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="normal|italic"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/beers_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/shots_tv"
+                android:layout_below="@+id/tags_tv"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignStart="@+id/shots_tv"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:maxWidth="300dp"
+                android:text="@string/sample_beers"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="14sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/shots_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tags_tv"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_shots"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="14sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/food_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/shots_tv"
+                android:layout_below="@+id/beers_tv"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignStart="@+id/shots_tv"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:maxWidth="300dp"
+                android:text="@string/sample_food"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="14sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/open_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/food_tv"
+                android:layout_alignStart="@+id/food_tv"
+                android:layout_below="@+id/food_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:text="@string/open_status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="14sp"
                 android:textStyle="normal|italic"
                 android:typeface="sans" />
@@ -74,312 +171,53 @@
                 android:id="@+id/address_icon_iv"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
-                android:layout_below="@id/tags_tv"
+                android:layout_below="@id/open_tv"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:contentDescription="@string/address_icon"
-                app:srcCompat="@drawable/ic_location_on_white_36dp" />
+                app:srcCompat="@drawable/ic_location_on_black_36px" />
 
             <TextView
                 android:id="@+id/address_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/address_icon_iv"
-                android:layout_below="@+id/tags_tv"
+                android:layout_below="@+id/open_tv"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/address_icon_iv"
                 android:layout_toRightOf="@+id/address_icon_iv"
                 android:text="@string/sample_address"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/white"
                 android:typeface="sans" />
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/open_close_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/place_details_header_rv"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
-            android:text="@string/open_close_times"
-            android:textColor="@color/black" />
-
         <RelativeLayout
-            android:id="@+id/week_info_rv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/open_close_header"
+            android:id="@+id/events_rv"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/black">
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/place_details_header_rv">
 
-            <RelativeLayout
-                android:id="@+id/monday_rv"
+            <ExpandableListView
+                android:id="@+id/event_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="1px"
-                android:background="@color/white"
-                android:padding="5dp">
+                android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/monday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/mon"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/monday_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@+id/monday_tv"
-                    android:layout_toRightOf="@+id/monday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/tuesday_rv"
+            <ExpandableListView
+                android:id="@+id/open_close_list"
+                android:layout_below="@+id/event_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/monday_rv"
-                android:layout_centerHorizontal="true"
-                android:layout_marginEnd="1px"
-                android:layout_marginLeft="1px"
-                android:layout_marginRight="1px"
-                android:layout_marginStart="1px"
-                android:background="@color/white"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/tuesday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/tue"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/tuesday_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@id/tuesday_tv"
-                    android:layout_toRightOf="@id/tuesday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/wednesday_rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tuesday_rv"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="1px"
-                android:background="@color/white"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/wednesday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/wed"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/wednesday_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@+id/wednesday_tv"
-                    android:layout_toRightOf="@+id/wednesday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/thursday_rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/wednesday_rv"
-                android:layout_centerHorizontal="true"
-                android:layout_marginEnd="1px"
-                android:layout_marginLeft="1px"
-                android:layout_marginRight="1px"
-                android:layout_marginStart="1px"
-                android:background="@color/white"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/thursday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/thur"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/thursday_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@+id/thursday_tv"
-                    android:layout_toRightOf="@+id/thursday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/friday_rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/thursday_rv"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="1px"
-                android:background="@color/white"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/friday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/fri"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/friday_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@+id/friday_tv"
-                    android:layout_toRightOf="@+id/friday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/saturday_rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/friday_rv"
-                android:layout_centerHorizontal="true"
-                android:layout_marginEnd="1px"
-                android:layout_marginLeft="1px"
-                android:layout_marginRight="1px"
-                android:layout_marginStart="1px"
-                android:background="@color/white"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/saturday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/sat"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/saturday_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@+id/saturday_tv"
-                    android:layout_toRightOf="@+id/saturday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/sunday_rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/saturday_rv"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="1px"
-                android:background="@color/white"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/sunday_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/sun"
-                    android:textAllCaps="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/sunday_time_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@+id/sunday_tv"
-                    android:layout_toRightOf="@+id/sunday_tv"
-                    android:gravity="end"
-                    android:text="@string/monday_time"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:typeface="sans" />
-
-            </RelativeLayout>
+                android:layout_height="wrap_content" />
 
         </RelativeLayout>
-
 
     </RelativeLayout>
 

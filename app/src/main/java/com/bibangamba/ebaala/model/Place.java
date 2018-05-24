@@ -2,7 +2,9 @@ package com.bibangamba.ebaala.model;
 
 import com.google.firebase.database.Exclude;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,17 +13,20 @@ import java.util.Map;
 public class Place {
     private String address;
     private String email;
-    private double latitude;
-    private double longitude;
+    private Double latitude, longitude;
     private String name;
     private double rating;
     private String phone;
     private String associatedTags;
+    private String services;
     private String image;
+    private ArrayList<String> events, open, popular;
+    private String beer, shots, food;
 
     public Place() {
 
     }
+
 
     public String getAddress() {
         return address;
@@ -39,19 +44,19 @@ public class Place {
         this.email = email;
     }
 
-    public double getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public double getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
@@ -87,6 +92,62 @@ public class Place {
         this.associatedTags = associatedTags;
     }
 
+    public String getServices() {
+        return services;
+    }
+
+    public void setServices(String services) {
+        this.services = services;
+    }
+
+    public ArrayList<String> getEvents() {
+        return events;
+    }
+
+    public void setEvents(ArrayList<String> events) {
+        this.events = events;
+    }
+
+    public ArrayList<String> getOpen() {
+        return open;
+    }
+
+    public void setOpen(ArrayList<String> open) {
+        this.open = open;
+    }
+
+    public String getBeer() {
+        return beer;
+    }
+
+    public void setBeer(String beer) {
+        this.beer = beer;
+    }
+
+    public String getShots() {
+        return shots;
+    }
+
+    public void setShots(String shots) {
+        this.shots = shots;
+    }
+
+    public String getFood() {
+        return food;
+    }
+
+    public void setFood(String food) {
+        this.food = food;
+    }
+
+    public ArrayList<String> getPopular() {
+        return popular;
+    }
+
+    public void setPopular(ArrayList<String> popular) {
+        this.popular = popular;
+    }
+
     @Override
     public String toString() {
         return "Place{" +
@@ -103,6 +164,7 @@ public class Place {
 
     @Exclude
     public Map<String, Object> toMap() {
+
         HashMap<String, Object> result = new HashMap<>();
         result.put("address", address);
         result.put("email", email);
@@ -111,7 +173,14 @@ public class Place {
         result.put("name", name);
         result.put("rating", rating);
         result.put("phone", phone);
+        result.put("events", events);
+        result.put("services", services);
         result.put("associatedTags", associatedTags);
+        result.put("beer", beer);
+        result.put("shots", shots);
+        result.put("food", food);
+        result.put("open", open);
+        result.put("popular", open);
         result.put("image", image);
         return result;
     }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.util.ArrayMap;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,10 +17,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bibangamba.ebaala.activities.PlaceDetails;
+import com.bibangamba.ebaala.adapters.CategoryAdapter;
 import com.bibangamba.ebaala.fragments.PlacesFragment;
 import com.bibangamba.ebaala.fragments.TonightFragment;
+import com.bibangamba.ebaala.model.Category;
+import com.bibangamba.ebaala.model.Event;
 import com.bibangamba.ebaala.model.Place;
 import com.bibangamba.ebaala.utils.FirebaseDatabaseUtil;
+import com.bibangamba.ebaala.utils.HelperClass;
+import com.bibangamba.ebaala.utils.RecylerClickListener;
+import com.bibangamba.ebaala.viewholders.CategoryViewHolder;
+import com.bibangamba.ebaala.viewholders.EventsViewHolder;
 import com.bibangamba.ebaala.viewholders.PlacesViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,21 +37,29 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * Created by bibangamba on 6/5/2017.
  */
 public abstract class AllDataListFragment extends Fragment {
     private final String TAG = "AllDataListFragment";
     Query mQuery;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase, eventDayRef, categoryRef;
     private FirebaseRecyclerAdapter<Place, PlacesViewHolder> placesAdapter;
+    private FirebaseRecyclerAdapter<Category, CategoryViewHolder> categoriesAdapter;
+    private CategoryAdapter categoryAdapter;
     private RecyclerView recyclerView;
     private TextView emptyDatasetFeedbackTV;
     private LinearLayoutManager linearLayoutManager;
     private String VIEW_TAG;
     //--DONE TODO: 7/12/2017 before deploying, delete all trips and make sure empty recycler view logic works as expected
     private String emptyRecyclerViewMessage = "";
-
+    HelperClass helperClass = new HelperClass();
+    private List<Category> categories = new ArrayList<>();
 
     public AllDataListFragment() {
 
@@ -56,7 +72,6 @@ public abstract class AllDataListFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.places_recycler_view_layout, container, false);
 
         mDatabase = FirebaseDatabaseUtil.getDatabase().getReference();
-
         recyclerView = (RecyclerView) rootView.findViewById(R.id.places_recycler_view);
         emptyDatasetFeedbackTV = (TextView) rootView.findViewById(R.id.empty_dataset_tv);
 //        recyclerView.setHasFixedSize(true);
@@ -75,8 +90,10 @@ public abstract class AllDataListFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         setRecyclerViewDivider();
 
+
 // Set up FirebaseRecyclerAdapter with the Query
         mQuery = getQuery(mDatabase);
+
         VIEW_TAG = getViewTag();
 
         mQuery.addValueEventListener(new ValueEventListener() {
@@ -109,11 +126,28 @@ public abstract class AllDataListFragment extends Fragment {
             }
         });
 
-        if (VIEW_TAG.equals(PlacesFragment.TAG) || VIEW_TAG.equals(TonightFragment.TAG)) {
+        if (VIEW_TAG.equals(PlacesFragment.TAG)) {
+
             placesAdapter = new FirebaseRecyclerAdapter<Place, PlacesViewHolder>(Place.class, R.layout.places_recycler_view_item, PlacesViewHolder.class, mQuery) {
+
+                //Override following 2 methods to handle Firebase Descending Order Flaws. Thanks to https://github.com/firebase/FirebaseUI-Android/issues/310
                 @Override
-                protected void populateViewHolder(PlacesViewHolder viewHolder, Place model, int position) {
-                    final DatabaseReference placeReference = getRef(position);
+                public Place getItem(int position) {
+                    return super.getItem(getItemCount() - 1 - position);
+                }
+
+                //To maintain On data change Behaviour
+                @Override
+                protected void onDataChanged() {
+                    recyclerView.removeAllViews();
+                    super.onDataChanged();
+                }
+
+                @Override
+                protected void populateViewHolder(PlacesViewHolder viewHolder, final Place model, int position) {
+
+                    //Pass a reversed version of position in getRef to match with overriden getItem(position) above
+                    final DatabaseReference placeReference = getRef(getItemCount() - 1 - position);
                     final String placeKey = placeReference.getKey();
 
                     viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -123,8 +157,13 @@ public abstract class AllDataListFragment extends Fragment {
                                 case PlacesFragment.TAG:
                                     // TODO: 10/18/2017 consider using an activity instead so the user can't access the navigation drawer when viewing details
                                     Intent intent = new Intent(getActivity(), PlaceDetails.class);
+
+                                    String[] placeInfo =  {placeKey, model.getName()};
                                     Bundle args = new Bundle();
-                                    args.putString("placeKey", placeKey);
+                                    intent.putExtra("placeInfo", placeInfo);
+                                    intent.putExtra("latitude", model.getLatitude());
+                                    intent.putExtra("longitude", model.getLongitude());
+
                                     intent.putExtras(args);
                                     startActivity(intent);
 
@@ -151,6 +190,69 @@ public abstract class AllDataListFragment extends Fragment {
             recyclerView.setAdapter(placesAdapter);
 
         }
+
+        //HANDLE TONIGHT EVENTS
+        if (VIEW_TAG.equals(TonightFragment.TAG)) {
+
+            categoryAdapter = new CategoryAdapter(categories);
+            //Get List of category ID's from event Days
+            eventDayRef = mDatabase.child("event_days").child(String.valueOf(helperClass.weekDay()));
+            eventDayRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    for (DataSnapshot categoryIDs : dataSnapshot.getChildren()){
+
+                        final String catID = categoryIDs.getValue().toString();
+                        categoryRef = mDatabase.child("event_categories").child(catID);
+                        categoryRef.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                Category category = new Category(dataSnapshot.child("name").getValue().toString(), catID);
+                                loadCategories(category);
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Log.e("Firebase Cancel ", "Error Selecting Category IDs :"+databaseError);
+                }
+
+            });
+
+            //END Category ID SingleListener
+            recyclerView.addOnItemTouchListener(new RecylerClickListener(getContext(), recyclerView, new RecylerClickListener.ClickListener() {
+                @Override
+                public void onClick(View view, int position) {
+
+                    Category selected = categories.get(position);
+                    Log.e("Firebase Cancel ", "ZU]KUKA Selecting"+selected.getName());
+                   // ExtendedListFragment listFragment = new ExtendedListFragment();
+                }
+
+                @Override
+                public void onLongClick(View view, int position) {
+
+                }
+            }));
+
+            recyclerView.setAdapter(categoryAdapter);
+        }
+
+    }
+
+    private void loadCategories (Category category){
+
+        categories.add(category);
+        categoryAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -172,6 +274,7 @@ public abstract class AllDataListFragment extends Fragment {
         dividerItemDecoration.setDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.divider));
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
+
 
     public String getUid() {
         return FirebaseAuth.getInstance().getCurrentUser().getUid();

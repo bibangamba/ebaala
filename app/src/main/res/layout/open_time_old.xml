@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/week_info_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/events_rv"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/monday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/monday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/mon"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/monday_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/monday_tv"
+                android:layout_toRightOf="@+id/monday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tuesday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/monday_rv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="1px"
+            android:layout_marginLeft="1px"
+            android:layout_marginRight="1px"
+            android:layout_marginStart="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tuesday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/tue"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tuesday_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@id/tuesday_tv"
+                android:layout_toRightOf="@id/tuesday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wednesday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tuesday_rv"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/wednesday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/wed"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/wednesday_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/wednesday_tv"
+                android:layout_toRightOf="@+id/wednesday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/thursday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wednesday_rv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="1px"
+            android:layout_marginLeft="1px"
+            android:layout_marginRight="1px"
+            android:layout_marginStart="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/thursday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/thur"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/thursday_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/thursday_tv"
+                android:layout_toRightOf="@+id/thursday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/friday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thursday_rv"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/friday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/fri"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/friday_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/friday_tv"
+                android:layout_toRightOf="@+id/friday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/saturday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friday_rv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="1px"
+            android:layout_marginLeft="1px"
+            android:layout_marginRight="1px"
+            android:layout_marginStart="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/saturday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/sat"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/saturday_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/saturday_tv"
+                android:layout_toRightOf="@+id/saturday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sunday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saturday_rv"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/sunday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/sun"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/sunday_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/sunday_tv"
+                android:layout_toRightOf="@+id/sunday_tv"
+                android:gravity="end"
+                android:text="@string/monday_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

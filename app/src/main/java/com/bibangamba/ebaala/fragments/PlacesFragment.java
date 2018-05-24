@@ -17,7 +17,7 @@ public class PlacesFragment extends AllDataListFragment {
 
     @Override
     public Query getQuery(DatabaseReference databaseReference) {
-        return databaseReference.child("places").limitToLast(100);
+        return databaseReference.child("places").orderByChild("name");
     }
 
     @Override
