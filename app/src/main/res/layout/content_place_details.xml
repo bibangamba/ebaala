@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.bibangamba.ebaala.activities.PlaceDetails"
+    tools:context="com.bandorestech.ebaala.activities.PlaceDetails"
     tools:showIn="@layout/place_details_activity"
     android:fillViewport="true">
 
@@ -21,6 +21,22 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/open_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/food_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="12dp"
+                android:text="@string/open_status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="14sp"
+                android:textStyle="normal|italic"
+                android:typeface="sans" />
 
             <TextView
                 android:id="@+id/place_name_tv"
@@ -90,7 +106,7 @@
                 android:layout_alignLeft="@+id/services_tv"
                 android:layout_alignStart="@+id/services_tv"
                 android:layout_below="@+id/services_tv"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="4dp"
                 android:text="@string/sample_tags"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="14sp"
@@ -110,7 +126,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:maxWidth="300dp"
                 android:text="@string/sample_beers"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -126,7 +142,7 @@
                 android:layout_below="@+id/tags_tv"
                 android:layout_marginEnd="12dp"
                 android:layout_marginRight="12dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 android:text="@string/sample_shots"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="14sp"
@@ -152,26 +168,11 @@
                 android:textSize="14sp"
                 android:typeface="sans" />
 
-            <TextView
-                android:id="@+id/open_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/food_tv"
-                android:layout_alignStart="@+id/food_tv"
-                android:layout_below="@+id/food_tv"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="8dp"
-                android:text="@string/open_status"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="14sp"
-                android:textStyle="normal|italic"
-                android:typeface="sans" />
-
             <ImageView
                 android:id="@+id/address_icon_iv"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
-                android:layout_below="@id/open_tv"
+                android:layout_below="@id/food_tv"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
@@ -183,7 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/address_icon_iv"
-                android:layout_below="@+id/open_tv"
+                android:layout_below="@+id/food_tv"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/address_icon_iv"

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/map"
     class="com.google.android.gms.maps.SupportMapFragment"
-    tools:context="com.bibangamba.ebaala.activities.PlaceDetails"
+    tools:context="com.bandorestech.ebaala.activities.PlaceDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/location_on_a_map"
